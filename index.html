@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Js Tasks</title>
-</head>
-<body>
-  <ul>
-    <li><a href="z1/z1_mysi.html">Zadanie 1</a></li>
-    <li><a href="z2/z2_mysi.html">Zadanie 2</a></li>
-    <li><a href="z3/z3_mysi.html">Zadanie 3</a></li>
-    <li><a href="z4/z4_mysi.html">Zadanie 4</a></li>
-    <li><a href="z5/z5_mysi.html">Zadanie 5</a></li>
-    <li><a href="z6/z6_mysi.html">Zadanie 6</a></li>
-    <li><a href="z7/z7_mysi.html">Zadanie 7</a></li>
-    <li><a href="z8/z8_mysi.html">Zadanie 8</a></li>
-    <li><a href="z9/z9_mysi.html">Zadanie 9</a></li>
-    <li><a href="z10/z10_mysi.html">Zadanie 10</a></li>
-  </ul>
-</body>
+<html>
+  <head>
+    <title>Mysiv 2p</title>
+    <script language="JavaScript">
+      function WinOpen(task) {
+      window.open(
+        `z${task}/z${task}_mysi.html`,
+        `okienko_z${task}`,
+        "toolbar=no, directories=no, menubar=no, height=380, width=160, top=200, left=200");
+      }
+    </script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 class="h1">Szkielet zaliczeniowy JavaScript Mysiv Sviatoslav 2P</h1>
+    <form>
+      <input type="button" name="zadanie1" value="zadanie1-Mysiv" onclick="WinOpen(1)">
+      <input type="button" name="zadanie2" value="zadanie2-Mysiv" onclick="WinOpen(2)">
+      <input type="button" name="zadanie3" value="zadanie3-Mysiv" onclick="WinOpen(3)">
+      <input type="button" name="zadanie4" value="zadanie4-Mysiv" onclick="WinOpen(4)">
+      <input type="button" name="zadanie5" value="zadanie5-Mysiv" onclick="WinOpen(5)">
+      <input type="button" name="zadanie6" value="zadanie6-Mysiv" onclick="WinOpen(6)">
+      <input type="button" name="zadanie7" value="zadanie7-Mysiv" onclick="WinOpen(7)">
+      <input type="button" name="zadanie8" value="zadanie8-Mysiv" onclick="WinOpen(8)">
+      <input type="button" name="zadanie9" value="zadanie9-Mysiv" onclick="WinOpen(9)">
+      <input type="button" name="zadanie10" value="zadanie10-Mysiv" onclick="WinOpen(10)">
+    </form>
+  </body>
 </html>
