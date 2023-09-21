@@ -3,11 +3,11 @@
   <head>
     <title>Mysiv 2p</title>
     <script language="JavaScript">
-      function WinOpen(task, height = 380, width = 160) {
+      function WinOpen(task, height = 380, width = 160, top = 200, left = 200) {
       window.open(
         `z${task}/z${task}_mysi.html`,
         `okienko_z${task}`,
-        `toolbar=no, directories=no, menubar=no, height=${height}, width=${width}, top=200, left=200`);
+        `toolbar=no, directories=no, menubar=no, height=${height}, width=${width}, top=${top}, left=${left}`);
       }
     </script>
     <link rel="stylesheet" href="style.css">
@@ -19,7 +19,7 @@
       <input type="button" name="zadanie2" value="zadanie2-Mysiv" onclick="WinOpen(2, 200)">
       <input type="button" name="zadanie3" value="zadanie3-Mysiv" onclick="WinOpen(3)">
       <input type="button" name="zadanie4" value="zadanie4-Mysiv" onclick="WinOpen(4, 500, 800)">
-      <input type="button" name="zadanie5" value="zadanie5-Mysiv" onclick="WinOpen(5)">
+      <input type="button" name="zadanie5" value="zadanie5-Mysiv" onclick="WinOpen(5, 250, 860, 50, 500)">
       <input type="button" name="zadanie6" value="zadanie6-Mysiv" onclick="WinOpen(6)">
       <input type="button" name="zadanie7" value="zadanie7-Mysiv" onclick="WinOpen(7)">
       <input type="button" name="zadanie8" value="zadanie8-Mysiv" onclick="WinOpen(8)">
