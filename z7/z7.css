@@ -1,0 +1,17 @@
+body {
+  background-color: gray;
+}
+h3 {
+  margin: 0;
+}
+
+input {
+  background-color: rgb(94, 91, 91);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+p {
+  width: 450px;
+  margin: 0;
+}
