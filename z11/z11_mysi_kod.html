@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea readonly>
+&lt;!DOCTYPE html&gt;
+<html>
+&lt;head&gt;
+  &lt;title&gt;proste obliczenia&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style="color:green;font-size:50px;">
+    &lt;script language="JavaScript">
+      const d1Mys = prompt("D1=" + "");
+      const d2Mys = prompt("D2=" + "");
+      const daysAmount = d1Mys - d2Mys;
+      const secondsAmount = daysAmount * 86400;
+
+      document.write("D1=" + d1Mys + "&lt;br&gt;");
+      document.write("D2=" + d2Mys + "&lt;br&gt;");
+      document.write("Ilość sekund=" + secondsAmount + "&lt;br&gt;");
+    &lt;/script>
+    &lt;/div>
+    &lt;input type="button" value="zamknij okno" onclick="window.close()"/>
+    &lt;/body>
+&lt;/html>
+    </textarea>
+  </body>
+</html>
