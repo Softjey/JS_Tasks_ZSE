@@ -1,26 +1,46 @@
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .h1 {
   font-size: 2cm;
   color: red;
+  margin: 0;
 }
+
 .zad-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-  max-height: 50vh;
+  width: calc(40vw + 20px);
   gap: 20px;
-  padding-inline: 15%;
   padding-bottom: 80px;
+  align-self: center;
+  margin-top: 5%;
 }
 
 .zad-buttons > input{
-  width: 160px;
-  height: 40px;
-  margin-inline: 20px;
+  background-color: #66fca2;
+  border-radius: 10px;
+  border: 2px solid #3eb16c;
+  width: 20vw;
+  height: 10vh;
+  font-size: 1.65vw;
+  font-weight: bold;
+  color: #ba30af;
+}
+
+.zad-buttons > input:hover {
+  transition: 500ms;
+
+  background-color: #1ae45a;
+  border: 2px solid #197b41;
+  color: #ffffff;
+  font-size: 1.8vw;
+  transform: scale(1.05);
 }
 .instr {
   position: fixed;

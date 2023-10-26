@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+<textarea readonly>
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title> Użycie fukcji </title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <div style="color:navy;font-size:50px;">
+      <script>
+        let a = parseFloat(prompt("a=", ''));
+        let b = parseFloat(prompt("b=", ''));
+
+        function suma_mys(a, b) {
+          return a + b;
+        }
+
+        function diff_mys(a, b) {
+          return a - b;
+        }
+
+        function multi_mys(a, b) {
+          return a * b;
+        }
+
+        function square_mys(a, b) {
+          return `a^2 = ${a ** 2}, b^2 = ${b ** 2}`;
+        }
+
+        function remainder_mys(a, b) {
+          return a % b;
+        }
+
+        document.write("suma=" + suma_mys(a, b) + "<br>");
+        document.write("odejmowanie=" + diff_mys(a, b) + "<br>");
+        document.write("mnożenie=" + multi_mys(a, b) + "<br>");
+        document.write("do kwadratu=" + square_mys(a, b) + "<br>");
+        document.write("reszta z dzielenia=" + remainder_mys(a, b) + "<br>");
+      </script>
+    </div>
+  </body>
+</html>
+    </textarea>
+  </body>
+</html>

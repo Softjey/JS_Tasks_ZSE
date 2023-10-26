@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+  <script type="text/javascript">
+    function pole_mysiv() {
+      var a_mys = parseFloat(document.getElementById('dlugosc').value);
+      var b_mys = a_mys * a_mys;
+      document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b_mys.toFixed(2) + " cm^2";
+    }
+    function obwod_mysiv() {
+      var a = parseFloat(document.getElementById('dlugosc').value);
+      var b = 4 * a;
+      document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b.toFixed(2) + " cm";
+    }
+  </script>
+  <h1>Wszystko o KWADRACIE</h1><br><br>
+  Podaj długość boku: <input type="text" id="dlugosc" placeholder="podaj długość"> cm<br><br><br>
+  <input type="button" name="pole" value="Oblicz pole" Onclick="pole_mysiv()"><br><br>
+  <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_mysiv()"><br><br>
+  <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+
+</html>
