@@ -24,8 +24,8 @@
   </title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
     }
@@ -33,22 +33,34 @@
     h1 {
       text-align: center;
       margin-top: 20px;
+      color: #333;
+      font-size: 24px;
     }
   
     form {
       text-align: center;
-      margin: 20px;
+      margin: 20px auto;
+      width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     }
   
     label {
       display: block;
       margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
     }
   
     input[type="number"] {
-      width: 100px;
-      padding: 5px;
+      width: 100%;
+      padding: 10px;
       font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 15px;
     }
   
     input[type="submit"] {
@@ -56,8 +68,9 @@
       color: #fff;
       border: none;
       padding: 10px 20px;
-      font-size: 16px;
+      font-size: 18px;
       cursor: pointer;
+      border-radius: 5px;
     }
   
     input[type="submit"]:hover {
@@ -68,6 +81,9 @@
       margin: 20px auto;
       border-collapse: collapse;
       width: 50%;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     }
   
     th, td {
@@ -80,38 +96,36 @@
       background-color: #007bff;
       color: #fff;
     }
+  
+    #wyprowadz_h, #wyprowadz_kat {
+      font-weight: bold;
+      font-size: 18px;
+    }
   </style>
   <script language="JavaScript">
-    function poleMysiv(aMys, bMys, hMys) {
-      return ((aMys + bMys) * hMys) / 2;
+    function heightMysiv(odl, s) {
+      return Math.sqrt(s**2 - odl**2);
     }
 
-    function obwodMysiv(aMys, bMys, hMys) {
-      const biggestSide = Math.max(aMys, bMys);
-      const smallestSide = Math.min(aMys, bMys);
-
-      const cTriangle = (biggestSide - smallestSide) / 2;
-
-      const cMys = Math.sqrt(hMys**2 + cTriangle**2) 
-
-      return 2 * cMys + aMys + bMys;
+    function angleMysiv(odl, s) {
+      const radian = Math.acos(odl / s);
+      return radian * (180 / Math.PI);
     }
 
     function calcPoleObwod(event) {
       event.preventDefault();
 
-      const aMys = parseFloat(document.querySelector('[name="a_dana_mys"]').value);
-      const bMys = parseFloat(document.querySelector('[name="b_dana_mys"]').value);
-      const hMys = parseFloat(document.querySelector('[name="h_dana_mys"]').value);
+      const odl_Mys = parseFloat(document.querySelector('[name="odl_dana_mys"]').value);
+      const s_Mys = parseFloat(document.querySelector('[name="s_dana_mys"]').value);
 
-      const pole = poleMysiv(aMys, bMys, hMys);
-      const obwod = obwodMysiv(aMys, bMys, hMys);
+      const pole = heightMysiv(odl_Mys, s_Mys);
+      const obwod = angleMysiv(odl_Mys, s_Mys);
 
-      const poleOutput = document.querySelector('#wyprowadz_pole');
-      const obwodOutput = document.querySelector('#wyprowadz_obwod');
+      const heightOutput = document.querySelector('#wyprowadz_h');
+      const angleOutput = document.querySelector('#wyprowadz_kat');
 
-      poleOutput.textContent = pole.toFixed(2);
-      obwodOutput.textContent = obwod.toFixed(2);
+      heightOutput.textContent = pole.toFixed(2);
+      angleOutput.textContent = obwod.toFixed(2);
     }
   </script>
 </head>
@@ -121,18 +135,13 @@
   <br> <br>
   <form name="formularz" action="#" onsubmit="calcPoleObwod(event); return false;">
     <label>
-      Podaj a=
-      <input type="number" step="0.001" name="a_dana_mys">
+      Podaj odlegloszc:
+      <input type="number" step="0.001" name="odl_dana_mys">
     </label>
 
     <label>
-      Podaj b=
-      <input type="number" step="0.001" name="b_dana_mys">
-    </label>
-
-    <label>
-      Podaj h=
-      <input type="number" step="0.001" name="h_dana_mys">
+      Podaj s:
+      <input type="number" step="0.001" name="s_dana_mys">
     </label>
 
     <input TYPE="submit" Value="oblicz">
@@ -140,12 +149,12 @@
 
   <table>
     <tr>
-      <th>Pole = </th>
-      <td id="wyprowadz_pole"></td>
+      <th>Wysokość: </th>
+      <td id="wyprowadz_h"></td>
     </tr>
     <tr>
-      <th>Obwod = </th>
-      <td id="wyprowadz_obwod"></td>
+      <th>Kąt startu: </th>
+      <td id="wyprowadz_kat"></td>
     </tr>
   </table>
 </body>
