@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea readonly>
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zadanie 5</title>
+        <link rel="stylesheet" href="z5.css">
+        <script>
+          function WinOpen_Mysiv(obraz, left) {
+            window.open(
+              `obraz${obraz}.html`,
+              `okienko_obraz${obraz}`,
+              `toolbar=no, directories=no, menubar=no, height=280, width=200, top=400, left=${left}`);
+          }
+        </script>
+      </head>
+      <body>
+        <h1>wykonał: Sviatoslav Mysiv mój numer w dzienniku 21, czyli mam układ [(21) mod 4=1] układ 1</h1>
+        <div class="buttons">
+          <button onclick=" WinOpen_Mysiv(1, 500)">grafika1</button>
+          <button onclick=" WinOpen_Mysiv(2, 720)">grafika2</button>
+          <button onclick=" WinOpen_Mysiv(3, 940)">grafika3</button>
+          <button onclick=" WinOpen_Mysiv(4, 1160)">grafika4</button>
+        </div>
+        
+        <input 
+          type="button" 
+          value="zamknij okno" 
+          onclick="window.close()"
+          class="close-button"
+        >
+      </body>
+      </html>
+    </textarea>
+  </body>
+</html>
