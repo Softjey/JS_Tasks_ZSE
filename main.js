@@ -1,3 +1,11 @@
+const ZAD_COUNT = 40;
+const form = document.querySelector('.zad-buttons');
+
+for (let i = 1; i <= ZAD_COUNT; i++) {
+  form.appendChild(createTaskButton(i));
+  form.appendChild(createCodeButton(i));
+}
+
 function WinOpen(task, code = false, height = 800, width = 800, top = 100, left = 100) {
   if (code) {
     window.open(
@@ -34,12 +42,4 @@ function createCodeButton(index) {
   button.onclick = () => { WinOpen(index, true) };
 
   return button;
-}
-
-const form = document.querySelector('.zad-buttons');
-const ZAD_COUNT = 30;
-
-for (let i = 1; i <= ZAD_COUNT; i++) {
-  form.appendChild(createTaskButton(i));
-  form.appendChild(createCodeButton(i));
 }
